@@ -94,7 +94,7 @@ function apistart(client, con) {
                     let json_ = rows
                     res.type('json').send(JSON.stringify(json_, null, 4) + '\n');
                 } else {
-                    let json_ = { "Info": "No bans found in scraper database (1)" }
+                    let json_ = { "Info": "No blacklists found in scraper database (1)" }
                     res.type('json').send(JSON.stringify(json_, null, 4) + '\n');
                 }
             });
