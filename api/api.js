@@ -69,6 +69,36 @@ function apistart(client, con) {
                 }
             });
         })
+        
+        // Fetch Bans
+        app.get('/fetchallbans', async (req, res) => {
+            res.set('Access-Control-Allow-Origin', '*');
+            await con.query(`SELECT * FROM bannedusers`, async (err, rows) => {
+                if(err) throw err;
+                if(rows[0]) {
+                    let json_ = rows
+                    res.type('json').send(JSON.stringify(json_, null, 4) + '\n');
+                } else {
+                    let json_ = { "Info": "No bans found in scraper database (1)" }
+                    res.type('json').send(JSON.stringify(json_, null, 4) + '\n');
+                }
+            });
+        });
+
+        // Fetch Blacklists
+        app.get('/fetchallblacklists', async (req, res) => {
+            res.set('Access-Control-Allow-Origin', '*');
+            await con.query(`SELECT * FROM blacklistedusers`, async (err, rows) => {
+                if(err) throw err;
+                if(rows[0]) {
+                    let json_ = rows
+                    res.type('json').send(JSON.stringify(json_, null, 4) + '\n');
+                } else {
+                    let json_ = { "Info": "No bans found in scraper database (1)" }
+                    res.type('json').send(JSON.stringify(json_, null, 4) + '\n');
+                }
+            });
+        });
 
         // Ban viewing
         app.get(`/bans/:userID`, async function(req, res) {
