@@ -11,7 +11,7 @@ exports.run = (client, message, args, con) => {
         let embed = new MessageEmbed()
         .setColor(client.config.colorhex)
         .setTitle(`${client.user.username} Statistics`)
-        .setDescription(`**Guild Count:** ${client.guilds.cache.size}\n**User Count:** ${client.users.cache.size}\n**Banned Count:** ${row[0].total}\n\n**Ping / Latency:** ${Date.now() - message.createdTimestamp}ms.\n**Creator:** [@Hyperz](https://hyperz.net/discord)`)
+        .setDescription(`**Guild Count:** ${client.guilds.cache.size}\n**User Count:** ${client.users.cache.size}\n**Banned Count:** ${row[0].total}\n\n**Ping / Latency:** ${Date.now() - message.createdTimestamp}ms.\n**Creator:** [@Hyperz](https://hyperz.net)`)
         try { embed.setThumbnail(message.guild.iconURL({ dynamic: true })) } catch(e) {}
         message.channel.send(embed).catch(e => { if(client.config.debugmode) return client.utils.error(client, e) });
         message.delete().catch(e => { if(client.config.debugmode) return client.utils.error(client, e) });
