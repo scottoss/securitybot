@@ -9,7 +9,7 @@ exports.run = (client, message, args, con) => {
     let embed = new MessageEmbed()
     .setAuthor(message.author.tag, message.author.displayAvatarURL())
     .setColor(client.config.colorhex)
-    .setDescription(`Created originally by [@Hyperz](https://hyperz.net/discord)`)
+    .setDescription(`Created originally by [@Hyperz](https://hyperz.net)`)
     message.channel.send(embed).catch(e => { if(client.config.debugmode) return client.utils.error(client, e) });
     message.delete().catch(e => { if(client.config.debugmode) return client.utils.error(client, e) });
 
