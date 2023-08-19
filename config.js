@@ -1,27 +1,27 @@
 const config = {
 
     // Client Settings
-    prefix: "s!",
+    prefix: "!",
     token: "your-token",
     date_format: "MM-DD-YYYY HH:mm A",
     copyright: "© 2021 Your Name",
     colorhex: "#eb3734",
-    voicechanneltojoin: "some-id",
-    port: "8080",
-    debugmode: true,
+    voicechanneltojoin: "1142563226652004418",
+    port: "8000",
+    debugmode: false,
     autoImportSQL: true, // It is recommended to turn this off after your first time boot to avoid errors
 
     // MySQL Settings
     database: {
         host: "localhost",
-        user: "root",
+        user: "secbot",
         port: 3306,
         password: "",
         database: "security"
     },
 
     clientAPI: {
-        enabled: false, // Enabled the API
+        enabled: true, // Enabled the API
         port: "3000" // The port to run the API on (cannot be the same as port on line 10)
     },
 
@@ -72,12 +72,12 @@ const config = {
     },
 
     defaultimage: "https://i.imgur.com/T9OdSQq.png", // If no evidence is provided
-    owners: ['865757954950955008'], // These are role IDS that can add staff members to the staff DB
+    owners: ['613030812501278740'], // These are role IDS that can add staff members to the staff DB
 
-    loggingguild: "865663211461017620", // This is a server ID
-    reportlogs: "865664707561914388", // This is a channel ID that reports will be sent to
-    appeallogs: "865664718283079720", // This is a channel ID that appeals will be sent to
-    updatebanslogs: "865664727551180832", // This is a channel ID that other will be sent to
+    loggingguild: "1142563224898785360", // This is a server ID
+    reportlogs: "1142572285618819095", // This is a channel ID that reports will be sent to
+    appeallogs: "1142572285618819095", // This is a channel ID that appeals will be sent to
+    updatebanslogs: "1142572285618819095", // This is a channel ID that other will be sent to
 
     supportServerInvite: "https://hyperz.dev/discord", // This is an invite to the bots support server
 
