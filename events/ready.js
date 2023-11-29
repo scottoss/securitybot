@@ -96,15 +96,15 @@ module.exports = async(client, con, ready) => {
                 });
             });
     
-            setTimeout(async () => {
-                const channel = client.channels.cache.get(client.config.voicechanneltojoin);
-                if (!channel) return console.error("The voice channel does not exist (change config's voicechanneltojoin)!");
-                channel.join().then(connection => {
-                    console.log("Successfully connected to the voice channel!")
-                }).catch(e => {
-                    console.error(e);
-                });
-            }, 3800);
+            //setTimeout(async () => {
+            //    const channel = client.channels.cache.get(client.config.voicechanneltojoin);
+            //    if (!channel) return console.error("The voice channel does not exist (change config's voicechanneltojoin)!");
+            //    channel.join().then(connection => {
+            //        console.log("Successfully connected to the voice channel!")
+            //    }).catch(e => {
+            //        console.error(e);
+            //    });
+            //}, 3800);
         }, 2000)
 
         // Presence Settings
